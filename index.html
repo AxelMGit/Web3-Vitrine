@@ -1,31 +1,112 @@
 <!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<title>Responsive Full Background Image</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="author" content="Six Revisions">
-  <meta name="description" content="How to use the CSS background-size property to make an image fully span the entire viewport.">
-  <link rel="icon" href="http://sixrevisions.com/favicon.ico" type="image/x-icon" />
-  <link href="http://fonts.googleapis.com/css?family=Kotta+One|Cantarell:400,700" rel="stylesheet" type="text/css">
-  <!--[if lt IE 9]>
-  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
-
-  <!-- responsive-full-background-image.css stylesheet contains the code you want -->
-  <link rel="stylesheet" href="main.css">*
-  <link rel="stylesheet" href="main2.css">
+  <head>
+    <meta charset="utf-8">
+    <title>Responsive Full Background Image</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Six Revisions">
+    <meta name="description" content="How to use the CSS background-size property to make an image fully span the entire viewport.">
+    <link rel="icon" href="http://sixrevisions.com/favicon.ico" type="image/x-icon">
+    <link href="http://fonts.googleapis.com/css?family=Kotta+One|Cantarell:400,700" rel="stylesheet" type="text/css">
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
   
-  <!-- Not required: jquery.min.js and presentational-only.js is only used to demonstrate scrolling behavior of the viewport  -->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <script src="main.js"></script>
-</head>
+    <!-- CSS for the navbar -->
+    <style>
+      /* Navbar styling */
+      .navbar {
+        background-color: #333;
+        padding: 10px 0;
+      }
+  
+      /* Navbar inner container */
+      .inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+  
+      /* Logo styling */
+      .logo img {
+        width: 100px;
+      }
+  
+      /* Button container styling */
+      .buttons {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+  
+      /* Button styling */
+      .button {
+        background-color: #555;
+        color: #fff;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+      }
+  
+      /* Button hover effect */
+      .button:hover {
+        background-color: #777;
+      }
+  
+      /* Footer styling */
+      .footer {
+        background-color: #333;
+        color: #fff;
+        padding: 20px 0;
+        text-align: center;
+      }
+  
+      /* Center-align footer links */
+      .footer-links {
+        display: flex;
+        justify-content: center;
+      }
+  
+      .footer-links a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 10px;
+      }
+  
+      .footer-links a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  
+    <!-- Existing CSS stylesheets -->
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="main2.css">
+    
+    <!-- Existing JavaScript files -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="main.js"></script>
+  </head>
+  
+  
 <body>
   <nav class="navbar" id="top">
     <div class="inner">
-      <a href="http://sixrevisions.com/css/responsive-background-image/">Read Tutorial</a>
+      <div class="logo">
+        <img src="images/logo.png" alt="Logo">
+      </div>
+      <div class="buttons">
+        <a href="#" class="button">Button 1</a>
+        <a href="#" class="button">Button 2</a>
+        <a href="#" class="button">Button 3</a>
+        <a href="#" class="button">Button 4</a>
+        <a href="#" class="button">Button 5</a>
+      </div>
     </div>
   </nav>
+  
   <header class="container">
     <section class="content">
       <h1>Responsive Full Background Image</h1>
