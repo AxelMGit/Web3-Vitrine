@@ -14,10 +14,17 @@
   
     <!-- CSS for the navbar -->
     <style>
+      a {
+        outline: none;
+        border: none;
+      }
+
       /* Navbar styling */
       .navbar {
         background-color: #333;
         padding: 10px 0;
+        display: flex;
+        align-items: center; 
       }
   
       /* Navbar inner container */
@@ -29,32 +36,64 @@
         margin: 0 auto;
         padding: 0 20px;
       }
+
+      .logo {
+        margin-right: auto; /* Keep logo in its corner */
+      }
   
       /* Logo styling */
       .logo img {
         width: 100px;
       }
-  
+
+    
       /* Button container styling */
       .buttons {
         display: flex;
         justify-content: center;
         gap: 20px;
+        align-items: center;
       }
   
       /* Button styling */
       .button {
-        background-color: #555;
-        color: #fff;
-        padding: 10px 20px;
+        background-color: transparent;
+        border: none;
+        color: #333; /* Match the color of the header text */
+        cursor: pointer;
+        display: inline-flex;
+        font-family: 'Cantarell', sans-serif; /* Match the font family of the header text */
+        font-size: 20px; /* Match the font size of the header text */
+        font-weight: bold; /* Match the font weight of the header text */
+        justify-content: center;
+        align-items: center;
+        text-align: center;
         text-decoration: none;
-        border-radius: 5px;
+        min-width: 140px;
+        height: 48px;
+        padding: 0 17px;
+        outline: none;
+        transition: all 0.3s;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        line-height: 24px;
+        letter-spacing: -0.8px;
+        font-style: normal; /* Ensure font style is normal */
       }
-  
-      /* Button hover effect */
-      .button:hover {
-        background-color: #777;
+
+      /* Button focus state */
+      .button:focus {
+        color: #171e29;
       }
+
+      /* Button hover and active state */
+      .button:hover,
+      .button:active {
+        border-color: #06f;
+        color: #06f;
+      }
+
   
       /* Footer styling */
       .footer {
@@ -97,7 +136,7 @@
       <div class="logo">
         <img src="images/logo.png" alt="Logo">
       </div>
-      <div class="buttons">
+      <div class="buttons" style="flex-grow: 1; text-align: center;" >
         <a href="#" class="button">Button 1</a>
         <a href="#" class="button">Button 2</a>
         <a href="#" class="button">Button 3</a>
