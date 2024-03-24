@@ -15,14 +15,44 @@
     <!-- CSS for the navbar -->
     <style>
   
-    .navbar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        background-color: #333;
-        z-index: 1000; /* Ensure the navbar appears above other content */
-    }
+/* Style the navigation bar */
+.navbar {
+  width: 100%;
+  background-color: rgba(85, 85, 85, 0.7); /* Translucent background color */
+  overflow: auto;
+  height: 60px; /* Increase the height to adjust the size of the translucent rectangle */
+  position: fixed; /* Keep the navbar fixed at the top */
+  top: 0; /* Align the navbar at the top */
+  z-index: 1000;
+}
+
+/* Navbar links */
+.navbar a {
+  float: left;
+  text-align: center;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Navbar links on mouse-over */
+.navbar a:hover {
+  background-color: #000;
+}
+
+/* Current/active navbar link */
+.active {
+  background-color: #04AA6D;
+}
+
+/* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
 
       body {
         margin: 0;
@@ -68,55 +98,14 @@
   
   
   <body>
-    <nav class="navbar">
-      <div class="container">
-        <div class="navbar-header">
-          <button class="navbar-toggler" data-toggle="open-navbar1">
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-          <a href="#">
-            <h4>Awesome<span>logo</span></h4>
-          </a>
-        </div>
-  
-        <div class="navbar-menu" id="open-navbar1">
-          <ul class="navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li class="navbar-dropdown">
-              <a href="#" class="dropdown-toggler" data-dropdown="my-dropdown-id">
-                Categories <i class="fa fa-angle-down"></i>
-              </a>
-              <ul class="dropdown" id="my-dropdown-id">
-                <li><a href="#">Actions</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li class="separator"></li>
-                <li><a href="#">Seprated link</a></li>
-                <li class="separator"></li>
-                <li><a href="#">One more seprated link.</a></li>
-              </ul>
-            </li>
-            <li class="navbar-dropdown">
-              <a href="#" class="dropdown-toggler" data-dropdown="blog">
-                Blog <i class="fa fa-angle-down"></i>
-              </a>
-              <ul class="dropdown" id="blog">
-                <li><a href="#">Some category</a></li>
-                <li><a href="#">Some another category</a></li>
-                <li class="separator"></li>
-                <li><a href="#">Seprated link</a></li>
-                <li class="separator"></li>
-                <li><a href="#">One more seprated link.</a></li>
-              </ul>
-            </li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Signin</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <div class="navbar">
+      <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
+      <a href="#"><i class="fa fa-fw fa-search"></i> Search</a>
+      <a href="#"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+      <a href="#"><i class="fa fa-fw fa-user"></i> Login</a>
+    </div>
   
     <header class="container">
       <section class="content">
