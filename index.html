@@ -1,152 +1,86 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Responsive Full Background Image</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="Six Revisions">
-    <meta name="description" content="How to use the CSS background-size property to make an image fully span the entire viewport.">
-    <link rel="icon" href="http://sixrevisions.com/favicon.ico" type="image/x-icon">
-    <link href="http://fonts.googleapis.com/css?family=Kotta+One|Cantarell:400,700" rel="stylesheet" type="text/css">
-    <!--[if lt IE 9]>
-    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  
-    <!-- CSS for the navbar -->
-    <style>
-  
-/* Style the navigation bar */
-.navbar {
-  width: 100%;
-  background-color: rgba(85, 85, 85, 0.7); /* Translucent background color */
-  overflow: auto;
-  height: 60px; /* Increase the height to adjust the size of the translucent rectangle */
-  position: fixed; /* Keep the navbar fixed at the top */
-  top: 0; /* Align the navbar at the top */
-  z-index: 1000;
-}
-
-/* Navbar links */
-.navbar a {
-  float: left;
-  text-align: center;
-  padding: 12px;
-  color: white;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-/* Navbar links on mouse-over */
-.navbar a:hover {
-  background-color: #000;
-}
-
-/* Current/active navbar link */
-.active {
-  background-color: #04AA6D;
-}
-
-/* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
-@media screen and (max-width: 500px) {
-  .navbar a {
-    float: none;
-    display: block;
-  }
-}
-
-      body {
-        margin: 0;
-        padding: 0;
-      }
-
-      /* Footer styling */
-      .footer {
-        background-color: #333;
-        color: #fff;
-        padding: 20px 0;
-        text-align: center;
-      }
-  
-      /* Center-align footer links */
-      .footer-links {
-        display: flex;
-        justify-content: center;
-      }
-  
-      .footer-links a {
-        color: #fff;
-        text-decoration: none;
-        margin: 0 10px;
-      }
-  
-      .footer-links a:hover {
-        text-decoration: underline;
-      }
-    </style>
-
-    <!-- Link to the compiled CSS file -->
-    <link rel="stylesheet" href="dist/navbar.css">
-  
-    <!-- Existing CSS stylesheets -->
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="main2.css">
-    
-    <!-- Existing JavaScript files -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="main.js"></script>
-  </head>
-  
-  
-  <body>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <div class="navbar">
-      <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
-      <a href="#"><i class="fa fa-fw fa-search"></i> Search</a>
-      <a href="#"><i class="fa fa-fw fa-envelope"></i> Contact</a>
-      <a href="#"><i class="fa fa-fw fa-user"></i> Login</a>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>yourname.</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:700" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="loading">
+        <div id="spinner"></div>
     </div>
-  
-    <header class="container">
-      <section class="content">
-        <h1>Responsive Full Background Image</h1>
-        <p class="sub-title"><strong>Resize your browser window</strong> <br /> to see the background image change in size</p>
-        <p><a class="button" id="load-more-content" href="#top">Load some content</a></p>
-        <p>To see scrolling behavior</p>
-        
-        <!-- Some content to demonstrate viewport scrolling behavior -->
-        <div id="more-content">
-          <p><br />Background image courtesy of <br /> <a href="http://unsplash.com/" target="_blank">Unsplash</a>.</p>
-          <blockquote>
-          Creating a goal-driven statement of what a product or application does results in better product experiences.
-          It meets expectations because it is focused on solving the problem it was created to address.
-          There is power in doing one thing and it doing it very well.
-          <cite>
-            Francisco Inchauste
-            From <a href="http://sixrevisions.com/usabilityaccessibility/creating-a-timeless-user-experience/" target="_blank">Creating a Timeless User Experience</a>
-          </cite>
-          </blockquote>
-          <blockquote>
-          Fitts' law is centered around a mathematical equation that is used to illustrate the time it takes to reach a target object.
-          A target object, in the context of UIs, can be any interactive element, such as a submit button, a hyperlink, and an input field in a web form.
-          The idea is this: The quicker you can reach a target object, the more convenient and easy it is to use.
-            <cite>
-            Jason Gross
-            From <a href="http://sixrevisions.com/usabilityaccessibility/improving-usability-with-fitts-law/" target="_blank">Improving Usability with Fitts' Law</a>
-            </cite>
-          </blockquote>
-          <blockquote>
-          Visual weight revolves around the idea that distinct elements in a design have varying heaviness relative to each other. 
-          Sometimes visual weight is obvious, such as in the case where larger objects appear heavier than smaller objects because they take up more space. 
-          In certain instances, it’s not so cut and dry, such as in the case of color. Some colors may look as if they are heavier and more dominant than others.
-            <cite>
-            Kayla Knight
-            From <a href="http://sixrevisions.com/graphics-design/visual-weight-designs/" target="_blank">Working with Visual Weight in Your Designs</a>
-            </cite>
-          </blockquote>
+    <div id="header" class="animated slideInDown" style="animation-delay:1.8s;">
+    <div id="title">yourname.</div><br>
+    <div id="links">
+        <a href="#skills">skills</a>
+        <a href="#work" style="margin:0px 60px;">works</a>
+        <a href="#contact">contact</a>
+    </div>
+    </div>
+
+    <center>
+    <div id="middle">
+        <div id="tagline" class="animated zoomIn" style="animation-delay:1.8s;">
+            if you're reading this, that mean's you can read<br>
+            <button class="btn_one">haha ok</button>
         </div>
-      </section>
-    </header>
-  </body>
-  
+    </div>
+    </center>
+
+    <div id="portfolio">
+             <div id="skills">
+                 <h1>skills.</h1>   
+                 <div>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In bibendum tincidunt nulla, id semper mi cursus ac. Fusce turpis urna, condimentum sit amet dolor at, vulputate ultrices massa. Vestibulum non euismod nulla, eu pretium risus. Curabitur porta molestie vulputate. Sed tortor enim, rhoncus vel mauris vitae, elementum condimentum augue. Donec fermentum lobortis lectus, in feugiat turpis faucibus et. Pellentesque luctus metus vitae augue lobortis sagittis vitae sit amet enim. Morbi egestas velit ac arcu fermentum lacinia. Nullam eget hendrerit neque. Cras et laoreet ante. Vivamus condimentum euismod commodo. Nulla pulvinar, turpis vitae condimentum tempor, ex ex eleifend quam, et maximus sapien mi sed est. Donec elit mi, dictum nec magna quis, mollis sollicitudin ligula. Maecenas ullamcorper ante vel ullamcorper mollis. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+                        </p>
+                 </div> 
+             </div>
+         
+              <div id="work">
+                 <h1>works.</h1>
+
+                 <div class="project">
+                 <h2>project title 1</h2>
+                 <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In bibendum tincidunt nulla, id semper mi cursus ac. Fusce turpis urna, condimentum sit amet dolor at, vulputate ultrices massa. Vestibulum non euismod nulla, eu pretium risus. Curabitur porta molestie vulputate.</div>
+                 <button class="btn_one">visit project</button>
+                </div>
+
+                <div class="project">
+                 <h2>project title 2</h2>
+                 <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In bibendum tincidunt nulla, id semper mi cursus ac. Fusce turpis urna, condimentum sit amet dolor at, vulputate ultrices massa. Vestibulum non euismod nulla, eu pretium risus. Curabitur porta molestie vulputate.Lorem ipsum dolor sit amet, consectetur adipiscing elit. In bibendum tincidunt nulla, id semper mi cursus ac. Fusce turpis urna, condimentum sit amet dolor at, vulputate ultrices massa. Vestibulum non euismod nulla, eu pretium risus. Curabitur porta molestie vulputate.
+                 </div>
+                 <button class="btn_one">visit project</button>
+                 <button class="btn_two">code</button>
+                </div>
+
+             </div>
+         
+              <div id="contact">
+                 <h1>contact.</h1> 
+                 <form>
+                     <input type="text" placeholder="name" required>
+                     <input type="email" placeholder="email" required><br>
+                     <textarea placeholder="your message" required rows="5"></textarea><br>
+                     <button class="btn_one">send</button>
+                 </form> 
+                 <div id="details">
+                    <a class="btn_social"><i class="fas fa-phone"></i></a>
+                    <a class="btn_social"><i class="fas fa-at"></i></a>
+                    <a class="btn_social"><i class="fab fa-twitter"></i></a>
+                    <a class="btn_social"><i class="fab fa-dribbble"></i></a>
+                 </div>   
+             </div>
+    </div>
+    <div id="footer">
+        made on earth by a human <br><br> <a href="https://imfunniee.github.io">imfunniee</a>
+    </div>
+<script src="index.js" type="text/javascript"></script>
+</body>
 </html>
