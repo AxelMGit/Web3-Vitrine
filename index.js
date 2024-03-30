@@ -1,5 +1,6 @@
 $(document).ready(function(){
   $("a").on('click', function(event) {
+    console.log("Anchor link clicked");
     if (this.hash !== "") {
       event.preventDefault();
       var hash = this.hash;
