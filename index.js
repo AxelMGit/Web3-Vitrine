@@ -32,3 +32,4 @@ setTimeout(function(){
       $("#loading").css("display","none");
     },800);
 },1450);
+
