@@ -67,7 +67,8 @@ body,html {
 
 #links a {
     margin: 0px 30px;
-    color: inherit;
+    color:#000000;
+    /*color: inherit;*/
     text-decoration: none;
     transition: 0.4s ease-in-out;
     padding: 5px 8px;
@@ -79,8 +80,9 @@ body,html {
     width:100%;
     height:80vh;
     background: linear-gradient(0deg, rgba(255,255,255,1), rgba(255,255,255,0)), url("images/background.jpg") center center fixed;
-    background-size:100% auto;
+    background-size: 100% auto;
     background-repeat:no-repeat;
+
     color:rgb(0, 0, 0);
     display:flex;
     justify-content:center;
@@ -108,7 +110,32 @@ body,html {
     -o-animation: Gradient 20s ease infinite;
     animation: Gradient 20s ease infinite;
     font-family: 'Assistant', sans-serif;
+
+    text-align: center;
 }
+
+#portfolio div p {
+    padding-top: 25px;
+    padding-bottom: 25px;
+
+    text-align: center;
+}
+
+#team-members {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+#team-members h2 {
+    text-align: center;
+}
+
+#team-members div {
+    text-align: center;
+}
+
+
 #skills {
     margin:4vh 0px !important;
     padding:2vh 0px !important;
@@ -161,6 +188,7 @@ body,html {
 ::placeholder {
     color:#000000;
 }
+
 .btn_one {
     color:rgb(0, 0, 0);
     padding:10px 40px;
