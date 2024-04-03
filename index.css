@@ -121,6 +121,20 @@ body,html {
     text-align: center;
 }
 
+#partners p {
+    text-align: center;
+}
+
+#partners-list {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+#partners-list div img {
+    height: 40%;
+}
+
 #team-members {
     display: flex;
     justify-content: space-around;
@@ -135,6 +149,19 @@ body,html {
     text-align: center;
 }
 
+#services-list {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+#services-list h2 {
+    text-align: center;
+}
+
+#services-list div {
+    text-align: center;
+}
 
 #skills {
     margin:4vh 0px !important;
