@@ -114,7 +114,7 @@ body,html {
     text-align: center;
 }
 
-#portfolio div p {
+#portfolio div div {
     padding-top: 25px;
     padding-bottom: 25px;
 
@@ -228,7 +228,10 @@ body,html {
     color:#fff;
 }
 #details {
-    margin:6vh 0px;
+    margin:10vh 0px;
+
+    display: flex;
+    justify-content: space-between;
 }
 .btn_social {
     font-size:18px;
@@ -282,12 +285,33 @@ body,html {
     #contact form textarea {
         width:92%;
     }
+
     .btn_social {
         font-size:14px;
         margin:10px;
         padding:10px 11px;
     }
 }
+
+#contact button {
+    display: flex;
+
+    justify-self: center;
+
+    margin-left: 45%;
+
+    color:rgb(0, 0, 0);
+    padding:10px 40px;
+    border-radius:50px;
+    border:2px solid #6A0DAD;
+    font-size:18px;
+    font-family: 'Assistant', sans-serif;
+    font-weight:bold;
+    background:transparent;
+    transition:0.4s ease-in-out;
+    
+}
+
 #footer {
     width:100%;
     padding:10vh 0px;
